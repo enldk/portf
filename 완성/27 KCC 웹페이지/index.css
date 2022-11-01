@@ -1,0 +1,115 @@
+@charset "utf-8";
+@import "https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css";
+a,a:link,a:visited,a:hover,a:active{
+	text-decoration:none;
+	color:#f1f1f1;
+}
+.clear::after{
+	content:'';
+	width:0; height:0;
+	display:block;
+	clear:both;
+	visibility:hidden;
+}
+img{vertical-align: top;}
+html{color:#333;}
+.wrap{width:1100px; margin:0 auto;}
+h2.hide_h{	display:none;
+	visibility:hidden;
+	width:0; height:0;
+	overflow:hidden;
+	text-indent:-9999px;}
+#logo{text-align: center; margin:10px;}
+
+header>nav{
+    text-align: center;
+    width:100%; height:50px;
+    background:#1c4199;
+}
+.main_menu>li:hover{background:#37466c;}
+.main_menu>li{
+    float:left;
+    width:220px;
+    height:50px;
+    line-height:50px;
+    font-size:1.2rem;
+    font-weight:bold;
+    position:relative;
+    z-index: 100;
+}
+.sub_menu{display:none;}
+.sub_menu>li{background:#37466c;}
+.sub_menu>li:hover{background:#2c719d;}
+
+header::after{
+	content:'';
+	width:0; height:0;
+	display:block;
+	clear:both;
+	visibility:hidden;
+}
+
+.sub_nav{
+    width:200px; height:100%; 
+    border:1px solid #ccc;
+    border-top: 0;
+    border-right: 0;
+    box-sizing: border-box;
+}
+.sub_nav>h2,.sub_nav>ul>li{
+    height:55px; 
+    line-height:50px; 
+    width:200px; 
+    text-align:center;
+    border-bottom:1px solid #ccc;
+    font-size:14px;
+}
+.sub_nav>h2{
+    font-size:1.2rem;
+    color:#f1f1f1;
+    background:#333; 
+}
+.sub_nav a{color:#333;}
+
+section.con>div{height:325px;float:left;}
+.con_txt{
+    width:900px; 
+    color:#333;
+    padding:20px 20px 0;
+    box-sizing: border-box;
+    font-size:.9rem;
+    letter-spacing: -0.5px;
+    line-height:1.8;
+    border:1px solid #ccc;
+    border-top: 0;
+}
+.con_txt>p:nth-of-type(1){
+    font-size:1.3rem;
+    color:#1c4199;
+}
+.con_txt>p:nth-of-type(3){text-align: right; font-size: 1rem;}
+
+.con_txt>ul>li>ul>li{float:left;}
+.con_txt>ul>li>ul>li>p{font-weight:bold; width:100px;}
+
+footer{
+    height:90px; 
+    background:#ccc; 
+    text-align:center;
+    position:relative;
+    color:#666;
+}
+footer>div{position: absolute;
+    left:50%; top:50%;
+    transform:translate(-50%,-50%);
+}
+footer>div>address{
+    font-weight:bold;
+    font-size:14px;
+}
+
+footer>div>p{
+    font-size:12px;
+    line-height:2.5;
+
+}

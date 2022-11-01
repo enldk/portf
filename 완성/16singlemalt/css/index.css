@@ -1,0 +1,379 @@
+@charset "utf-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #222;
+}
+footer a {
+  color: #fff;
+}
+a {
+  text-decoration: none;
+}
+h2 {
+  display: none;
+}
+.wrap {
+  width: 1420px;
+  margin: 0 auto;
+}
+.clear::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both;
+}
+img {
+  vertical-align: top;
+}
+html {
+  text-align: center;
+}
+/*유틸*/
+header > div {
+  width: 100%;
+  height: 40px;
+  background: #918b8d;
+  position: relative;
+}
+header > div > div {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 225px;
+  line-height: 225px;
+  background: rgba(0, 0, 0, 0.9);
+  top: 40px;
+  z-index: 99;
+}
+header > div > div > input {
+  border: 0;
+  outline: 0;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  background: none;
+  width: 650px;
+  height: 20px;
+  padding-left: 25px;
+  margin: 0 auto;
+}
+header > div > div > span {
+  background: url("../images/close.png") no-repeat left top/contain;
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 40px;
+  right: 265px;
+}
+header > div > div > i {
+  background: url(../images/search.png) no-repeat left bottom/contain;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  transform: translateY(10px);
+}
+
+header > div > ul > li {
+  float: right;
+  margin-right: 30px;
+}
+header > div > ul > li a {
+  color: #fff !important;
+  font-size: 12px;
+  line-height: 40px;
+  display: block;
+  height: 40px;
+}
+header > div > ul > li a img {
+  height: 20px;
+  width: 20px;
+  margin-top: 10px;
+}
+/*유틸 끝*/
+
+/*GNB*/
+nav {
+  height: 80px;
+}
+#gnb {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+#gnb > li {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+}
+#gnb > li > a,
+.submenu > li > a {
+  display: block;
+  width: 230px;
+  height: 100%;
+  line-height: 80px;
+  color: #918b8d;
+}
+#gnb > li img {
+  margin-top: 11px;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  top: 81px;
+  width: 100%;
+  border: 1px solid #8a9168;
+  border-top: 0;
+  background: #fff;
+}
+.submenu > li:hover {
+  background: #ddd;
+}
+#gnb > li:nth-child(-n + 5) > a::after {
+  content: "";
+  background: #918b8d;
+  height: 3px;
+  width: 0%;
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  bottom: 22px;
+  transition: all 0.4s;
+}
+#gnb > li:nth-child(-n + 5):hover > a::after {
+  width: 50%;
+}
+header {
+  border-bottom: 1px solid #8a9168;
+}
+/*GNB 끝*/
+
+/*비주얼 배너*/
+#bnr_con {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  height: 570px;
+  overflow: hidden;
+}
+#slideImg {
+  position: relative;
+}
+#slideImg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 570px;
+  object-fit: cover;
+}
+#carousel {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+}
+#carousel i {
+  width: 50px;
+  height: 3px;
+  background: #9d9d9d;
+  display: inline-block;
+  margin: 5px;
+}
+.topImg {
+  z-index: 8;
+}
+.btnWrap {
+  z-index: 98;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.btnWrap > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: 0;
+  left: 20%;
+  cursor: pointer;
+  width: 25px; /* 사이즈 */
+  height: 25px; /* 사이즈 */
+  border-top: 3px solid #000; /* 선 두께 */
+  border-right: 3px solid #000; /* 선 두께 */
+  transform: rotate(225deg); /* 각도 */
+}
+.btnWrap > button:last-child {
+  left: initial;
+  right: 20%;
+  transform: rotate(45deg); /* 각도 */
+}
+
+/*비주얼 배너 끝*/
+
+/*프리미엄 상품*/
+
+.pd_sec {
+  margin-top: 30px;
+}
+.pd_sec > ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.pd_sec > ul li {
+  position: relative;
+}
+.pd_sec > ul figcaption {
+  position: absolute;
+  display: none;
+  color: #fff;
+  transition: all 0.4s;
+}
+.pd_sec > ul a:hover figcaption dt {
+  font-size: 20px;
+}
+.pd_sec > ul a:hover figcaption {
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.pd_sec > ul a:hover figcaption dl {
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+
+/*macallan_list*/
+.list_sec {
+  margin-top: 135px;
+}
+
+.list_sec > ul {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: top;
+  align-content: space-between;
+  height: 800px;
+}
+.list_sec > ul > li {
+  height: 380px;
+  width: 310px;
+}
+.list_sec > ul > li:first-child {
+  height: 800px;
+  width: 220px;
+}
+.list_sec > ul > li:nth-child(2n + 3) {
+  margin-top: 30px;
+}
+.list_sec > ul > li:first-child figcaption {
+  color: #918b8d;
+  font-weight: bold;
+  font-size: 22px;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+.list_sec > ul > li:nth-child(n + 2) {
+  border-bottom: 1px solid #cacaca;
+}
+.list_sec > ul > li:nth-child(n + 2) img {
+  border: 1px solid #cacaca;
+}
+.list_sec > ul > li dt {
+  font-size: 18px;
+  font-weight: 300;
+}
+.list_sec > ul > li dd {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+/**/
+
+/*glenmorangie_list*/
+.list_sec > ul:last-child {
+  margin-top: 130px;
+  padding-bottom: 120px;
+  border-bottom: 2px dashed #cacaca;
+  margin-bottom: 120px;
+}
+
+/**/
+
+/*푸터*/
+footer {
+  background: #918b8d;
+  height: 300px;
+}
+footer a,
+footer a:visited {
+  color: #fff !important;
+  font-weight: 300;
+}
+footer > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  color: #fff;
+  display: flex;
+}
+footer > div > * {
+  width: 330px;
+  margin-top: 50px;
+  text-align: left;
+  line-height: 2;
+}
+footer > div > p {
+  line-height: 220px;
+}
+ul.sns_link > li > a::before {
+  content: "";
+  background: url(../images/sns.png) no-repeat;
+  position: absolute;
+  left: 0px;
+  top: 2px;
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+ul.sns_link > li:nth-child(1) > a::before {
+  display: none;
+}
+ul.sns_link > li:nth-child(3) > a::before {
+  background-position: 0 -20px;
+}
+ul.sns_link > li:nth-child(4) > a::before {
+  background-position: 0 -40px;
+}
+ul.sns_link > li:nth-child(5) > a::before {
+  background-position: 0 -60px;
+}
+ul.sns_link > li > a {
+  padding-left: 25px;
+  z-index: 5;
+  position: relative;
+}

@@ -1,0 +1,420 @@
+@charset "utf-8";
+@import url("http://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+/*font-family: 'Noto Sans KR', sans-serif;*/
+@font-face {
+  font-family: "Geometos";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./Geometos-Rounded.woff") format("woff");
+}
+@font-face {
+  font-family: "Geometos";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./Geometos-Rounded.woff") format("woff");
+}
+@font-face {
+  font-family: "Geometos";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./Geometos-Rounded.woff") format("woff");
+}
+@font-face {
+  font-family: "Geometos";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./Geometos-Rounded.woff") format("woff");
+}
+@font-face {
+  font-family: "Geometos";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./Geometos-Rounded.woff") format("woff");
+}
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.clear {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+  clear: both;
+}
+h2 {
+  display: none;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+img {
+  vertical-align: top;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html {
+  font-size: 14px;
+  font-family: "Noto Sans KR", sans-serif;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #333;
+}
+.con_wrap {
+  width: 62.5%;
+  margin: 0 auto;
+  min-width: 690px;
+}
+.twrap {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1360px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background: #fff;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  z-index: 9;
+}
+header > div {
+  height: 90px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  overflow: hidden;
+  min-width: 998px;
+}
+h1 {
+  display: inline;
+}
+h1 > a {
+  display: block;
+  width: 189px;
+  height: 90px;
+  line-height: 90px;
+}
+h1 > a > img {
+  width: 100%;
+  vertical-align: middle;
+}
+header > div > ul {
+  height: 90px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  line-height: 90px;
+  font-family: "geometos", sans-serif;
+  font-size: 20px;
+}
+header > div > ul > li > a {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+header > div > ul > li {
+  padding: 0 31px;
+  position: relative;
+}
+header > div > ul > li::after {
+  content: "";
+  height: 3px;
+  width: 0%;
+  position: absolute;
+  bottom: 1px;
+  left: 3px;
+  background: #780997;
+  transition: all 0.4s;
+  transform: translateX(-50%);
+}
+header > div > ul > li:nth-child(2)::after,
+header > div > ul > li:hover::after {
+  width: 95%;
+  left: 50%;
+}
+
+header > div > ul > li:hover > a {
+  color: #780997;
+}
+header > div > ul > li:nth-child(2) > a {
+  color: #780997;
+}
+header > div > a {
+  background: #780997;
+  line-height: 50px;
+  height: 50px;
+  border-radius: 35px;
+  color: #fff;
+  font-size: 18px;
+  width: 160px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+header > div > a:hover {
+  background: #291b35;
+  color: #fff;
+  transition: all 0.4s;
+}
+header > div > a > img {
+  vertical-align: middle;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+
+aside {
+  position: fixed;
+  top: 50%;
+  right: 30px;
+  transform: translateY(-50%);
+  z-index: 9;
+}
+aside li {
+  width: 110px;
+  height: 110px;
+  background: #291b35;
+  border-radius: 50%;
+  margin-top: 10px;
+  transition: all 0.4s;
+}
+aside li:hover {
+  background: #780997;
+  transition: all 0.8s;
+}
+aside a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+aside a > div {
+  width: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+aside a > div > p {
+  font-size: 22px;
+  font-family: "Arial", sans-serif;
+  margin-top: 8px;
+}
+
+section.bnr_sec {
+  margin-top: 90px;
+  background: url("./images/header_bg.png") no-repeat center/cover;
+  height: 510px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+section.bnr_sec > p:nth-of-type(1) {
+  font-size: 45px;
+  color: #fff;
+  font-family: "Geometos", sans-serif;
+}
+section.bnr_sec > p:nth-of-type(2) {
+  color: #fff;
+  font-size: 18px;
+  margin-top: 18px;
+}
+
+section.con_sec > div > ul {
+  border-bottom: 2px solid #ddd;
+  justify-content: center;
+}
+section.con_sec > div > ul > li > a {
+  padding: 0 30px;
+  height: 68px;
+  line-height: 68px;
+  font-size: 18px;
+  display: block;
+  box-sizing: border-box;
+}
+section.con_sec > div > ul > li:nth-child(3) > a,
+section.con_sec > div > ul > li:hover > a {
+  border-bottom: 2px solid #780997;
+  color: #780997;
+  line-height: 65px;
+}
+section.con_sec > nav {
+  margin-top: 100px;
+}
+section.con_sec > nav > ul > li {
+  width: 25%;
+}
+section.con_sec > nav > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 46px;
+  line-height: 46px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #222;
+  background: #e6deda;
+}
+section.con_sec > nav > ul > li:nth-child(6) > a,
+section.con_sec > nav > ul > li > a:hover {
+  background: #36252f;
+  color: #fff;
+}
+article.con_wrap {
+  margin-top: 44px;
+}
+article.con_wrap > ul > li {
+  width: 24%;
+  height: 360px;
+  margin: 0.5% 0.5%;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  position: relative;
+}
+li.best::after {
+  content: "BEST";
+  color: #fff;
+  display: block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background: #e98004;
+  border-radius: 50px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+article.con_wrap > ul > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 4px solid transparent;
+}
+article.con_wrap > ul > li > a:hover {
+  border: #e98004 solid 4px;
+  box-sizing: border-box;
+}
+article.con_wrap > ul > li > a > img {
+  padding: 30px;
+  transition: all 0.4s;
+}
+article.con_wrap > ul > li > a:hover > img {
+  transform: scale(1.1);
+  transition: all 0.4s;
+}
+article.con_wrap > ul > li > a p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+h3.hot,
+h3.ice {
+  width: 7px;
+  height: 7px;
+  background: red;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 3px 4px;
+}
+h3.ice {
+  background: #006db0;
+}
+
+footer {
+  background: #2c0039;
+  width: 100%;
+  color: #fff;
+  margin-top: 150px;
+}
+
+footer > div.twrap > div {
+  padding: 60px 0px;
+}
+.footer_top {
+  border-bottom: 1px solid #ccc;
+  align-items: flex-end;
+}
+.footer_top > ul.ftr_m > li {
+  padding: 0 10px;
+}
+.footer_top > ul.ftr_m > li > a {
+  width: 500px;
+  height: 10px;
+  color: #fff;
+}
+.footer_top > ul.ftr_r > li {
+  margin-left: 5px;
+}
+
+div.footer_bot {
+  align-items: center;
+}
+
+.ftr_l p {
+  height: 44px;
+  line-height: 40px;
+  font-family: "Geometos", sans-serif;
+}
+.ftr_l > p > span:first-child {
+  vertical-align: top;
+  font-size: 16px;
+}
+.ftr_l > p > span:last-child {
+  font-size: 24px;
+  color: #ff5b28;
+  font-weight: bold;
+}
+.ftr_m {
+  text-align: left;
+  color: #ccc;
+  line-height: 2;
+}
+.ftr_m span {
+  color: #fff;
+  margin-right: 15px;
+}
+.ftr_m > p:last-child {
+  margin-top: 15px;
+}
+.ftr_r > a:hover {
+  background: #000;
+}
+.ftr_r > a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  width: 125px;
+  background: #ff5b28;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.4s;
+}
+.ftr_r > a > img {
+  margin-top: 15px;
+  margin-left: 5px;
+}
