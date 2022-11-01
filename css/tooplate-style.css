@@ -830,6 +830,24 @@ figure.effect-bubba:hover p {
   margin: 0 auto;
   margin-bottom: 10px;
 }
+.open_page {
+  background: gray;
+  width: 120px;
+  height: 30px;
+  position: absolute;
+  z-index: 999999;
+  display: block;
+  bottom: 0;
+  transition: all 0.4s;
+  opacity: 0;
+  font-size: 18px;
+  border: 0;
+}
+figure:hover .open_page {
+  transition: all 0.4s;
+  opacity: 1;
+}
+
 /* Media Queries */
 
 @media only screen and (min-width: 400px) {
