@@ -848,6 +848,25 @@ figure:hover .open_page {
   opacity: 1;
 }
 
+#contac {
+  position: relative;
+}
+#contac > p > a {
+  color: #000;
+}
+#contac > img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 30%;
+}
+#contac > img.face {
+  bottom: 50%;
+  transform: translateY(25%);
+  right: 1%;
+  width: 20%;
+}
+
 /* Media Queries */
 
 @media only screen and (min-width: 400px) {
